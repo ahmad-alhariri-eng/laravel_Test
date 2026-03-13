@@ -17,10 +17,11 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = \Faker\Factory::create();
         return [
-            'title' => \fake()->sentence(),
-            'content' => \fake()->paragraphs(3, true),
-            'author' => \fake()->name(),
+            'title' => $faker->sentence(),
+            'content' => $faker->paragraphs(3, true),
+            'author' => $faker->name(),
         ];
     }
 }
